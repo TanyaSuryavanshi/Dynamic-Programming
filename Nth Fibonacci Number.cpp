@@ -60,6 +60,8 @@ int main()
         
         int prev2=0;
         int prev1=1;
+        if(n==0)
+                return prev2;
         
         for(int i=2;i<=n;i++){
                 int curr=prev1+prev2;
