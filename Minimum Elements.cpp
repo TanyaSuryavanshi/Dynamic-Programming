@@ -21,7 +21,7 @@ int solvemem(vector<int> &num, int x,vector<int> &dp){
         return dp[x];
     int mini=INT_MAX;
     for(int i=0;i<num.size();i++){
-        int ans=solverec(num,x-num[i]);
+        int ans=solvemem(num,x-num[i],dp);
         if(ans!=INT_MAX)
             mini=min(mini,1+ans);
     }
