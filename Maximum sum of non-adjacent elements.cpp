@@ -17,8 +17,8 @@ int solvemem(vector<int> &nums,int n,vector<int> &dp){
         return nums[0];
     if(dp[n]!=-1)
         return dp[n];
-    int incl=solve(nums,n-2)+nums[n];
-    int exclu=solve(nums,n-1)+0;
+    int incl=solvemem(nums,n-2,dp)+nums[n];
+    int exclu=solvemem(nums,n-1,dp)+0;
 
     dp[n]= max(incl,exclu);
     return dp[n];
